@@ -7,12 +7,59 @@
     tools:context=".StartScreen">
 
     <TextView
+        android:id="@+id/ageText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
+        android:text="What age are you?"
+        android:textSize="36sp"
+        android:typeface="normal"
+        app:fontFamily="@font/ubuntu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.100000024" />
+
+    <ImageButton
+        android:id="@+id/age4_7"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageText"
+        app:layout_constraintVertical_bias="0.204"
+        app:srcCompat="@drawable/age4" />
+
+    <ImageButton
+        android:id="@+id/ages8_11"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age4_7"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@drawable/age8" />
+
+    <ImageButton
+        android:id="@+id/ages12"
+        android:layout_width="350dp"
+        android:layout_height="80dp"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ages8_11"
+        app:layout_constraintVertical_bias="0.100000024"
+        app:srcCompat="@drawable/age12" />
 
 </android.support.constraint.ConstraintLayout>
