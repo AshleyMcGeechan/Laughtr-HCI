@@ -39,7 +39,7 @@
         app:layout_constraintVertical_bias="0.25" />
 
     <ImageButton
-        android:id="@+id/age4_7"
+        android:id="@+id/ages4_7"
         style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="350dp"
         android:layout_height="80dp"
@@ -58,13 +58,15 @@
         style="@android:style/Widget.Holo.ImageButton"
         android:layout_width="350dp"
         android:layout_height="80dp"
+        android:layout_marginBottom="180dp"
         android:adjustViewBounds="false"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/age4_7"
+        app:layout_constraintTop_toBottomOf="@+id/ages4_7"
         app:layout_constraintVertical_bias="0.050000012"
         app:srcCompat="@drawable/age8" />
 
@@ -80,7 +82,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ages8_11"
-        app:layout_constraintVertical_bias="0.100000024"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/age12" />
 
     <ImageView
