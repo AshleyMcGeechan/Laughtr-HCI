@@ -14,6 +14,8 @@ public class StartScreen extends AppCompatActivity {
 
         final ImageButton button = findViewById(R.id.ages4_7);
         final ImageButton button8_11 = findViewById(R.id.ages8_11);
+        final ImageButton button12 = findViewById(R.id.ages12);
+
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 setContentView(R.layout.mood_ages4_7);
@@ -26,6 +28,11 @@ public class StartScreen extends AppCompatActivity {
             }
         });
 
+        button12.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                setContentView(R.layout.mood_ages12);
+            }
+        });
 
     }
 }
