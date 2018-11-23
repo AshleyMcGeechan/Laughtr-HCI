@@ -16,6 +16,42 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <activity android:name=".TeensMood"
+            android:parentActivityName=".StartScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreen" />
+        </activity>
+
+        <activity android:name=".KidsMood"
+            android:parentActivityName=".StartScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreen" />
+        </activity>
+
+        <activity android:name=".ToddlerMood"
+            android:parentActivityName=".StartScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreen" />
+        </activity>
+
+        <activity android:name=".LaughScreen"
+            android:parentActivityName=".KidsMood">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".KidsMood" />
+        </activity>
+
+        <activity android:name=".LaughCountDown"
+            android:parentActivityName=".KidsMood">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".KidsMood" />
+        </activity>
+
     </application>
 
 </manifest>

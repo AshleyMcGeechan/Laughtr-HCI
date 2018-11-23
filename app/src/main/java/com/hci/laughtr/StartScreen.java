@@ -4,6 +4,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
+import android.content.Intent;
 
 public class StartScreen extends AppCompatActivity {
 
@@ -18,21 +19,26 @@ public class StartScreen extends AppCompatActivity {
 
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.mood_ages4_7);
+                Intent myIntent = new Intent(v.getContext(), ToddlerMood.class);
+                startActivityForResult(myIntent, 0);
             }
         });
 
         button8_11.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.mood_ages8_11);
+                Intent myIntent = new Intent(v.getContext(), KidsMood.class);
+                startActivityForResult(myIntent, 0);
             }
         });
 
         button12.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                setContentView(R.layout.mood_ages12);
+                Intent myIntent = new Intent(v.getContext(), TeensMood.class);
+                startActivityForResult(myIntent, 0);
             }
         });
 
     }
+
+
 }

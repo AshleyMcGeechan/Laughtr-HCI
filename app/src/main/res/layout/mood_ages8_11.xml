@@ -80,5 +80,43 @@
         app:layout_constraintVertical_bias="0.2"
         app:srcCompat="@drawable/sadface" />
 
+    <ImageButton
+        android:id="@+id/angryFace"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/sleepyFace"
+        app:layout_constraintHorizontal_bias="0.699"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/happyFace"
+        app:layout_constraintVertical_bias="0.497"
+        app:srcCompat="@drawable/angryface" />
+
+    <ImageButton
+        android:id="@+id/sleepyFace"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="8dp"
+        android:background="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.905"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sadFace"
+        app:layout_constraintVertical_bias="0.497"
+        app:srcCompat="@drawable/sleepyface" />
+
 
 </android.support.constraint.ConstraintLayout>
