@@ -2,13 +2,12 @@ package com.hci.laughtr;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-public class KidsMood extends AppCompatActivity {
+public class KidsMood2 extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.hci.laughtr.MESSAGE";
     private TextView feelText;
     boolean end = false;
@@ -17,9 +16,6 @@ public class KidsMood extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.mood_ages8_11);
         feelText = findViewById(R.id.feelText);
-
-
-
 
     }
 
@@ -32,24 +28,7 @@ public class KidsMood extends AppCompatActivity {
         final ImageButton sleepybtn = findViewById(R.id.sleepyFace);
 
 
-        feelText = findViewById(R.id.feelText);
-
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(EXTRA_MESSAGE);
-
-        if (message !=null && message.equals("End")) {
-            end=true;
-            feelText.setText("How About Now?");
-        }
-
-
-//        final Intent myIntent =new Intent(this, LaughCountDown.class);
-//        myIntent.putExtra(EXTRA_MESSAGE, "1");
-//        if(end){
-//            myIntent.setClass(this,AnalysisScreen.class);
-//        }else{
-//            myIntent.putExtra(EXTRA_MESSAGE, "1");
-//        }
+        feelText.setText("How About Now?");
 
 
         plainbtn.setOnClickListener(new View.OnClickListener() {
@@ -76,13 +55,7 @@ public class KidsMood extends AppCompatActivity {
 
     public void nextActivity(){
         Intent myIntent ;
-        if(end){
-            myIntent =new Intent(this, AnalysisScreen.class);
-
-        }else{
-            myIntent =new Intent(this, LaughCountDown.class);
-            myIntent.putExtra(EXTRA_MESSAGE, "1");
-        }
+        myIntent =new Intent(this, AnalysisScreen.class);
         startActivity(myIntent);
     }
 }

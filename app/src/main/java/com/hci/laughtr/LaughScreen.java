@@ -6,8 +6,9 @@ import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 
 public class LaughScreen extends AppCompatActivity {
-
+    public static final String EXTRA_MESSAGE = "com.hci.laughtr.MESSAGE";
     private CountDownTimer laughtTimer;
+    Intent myIntent;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,11 +18,27 @@ public class LaughScreen extends AppCompatActivity {
 
     protected void onStart(){
         super.onStart();
-        final Intent myIntent = new Intent(this, KidsMood.class);
-        laughtTimer = new CountDownTimer(8 * 1000 , 1000) {
+        Intent maybeIntent;
+
+        Intent intent = getIntent();
+        int message = Integer.parseInt(intent.getStringExtra(EXTRA_MESSAGE));
+
+        if (message ==0)maybeIntent = new Intent(this, ToddlerMood.class);
+        else if (message ==1) maybeIntent = new Intent(this, KidsMood2.class);
+        else if (message ==2)maybeIntent = new Intent(this, TeensMood.class);
+        else maybeIntent = new Intent(this, StartScreen.class);
+
+
+
+
+        myIntent = maybeIntent;
+        myIntent.putExtra(EXTRA_MESSAGE, "End");
+
+        laughtTimer = new CountDownTimer(6 * 1000 , 1000) {
             public void onTick(long millisUntilFinished) { }
             public void onFinish() {
-                startActivityForResult(myIntent, 0);
+                startActivity(myIntent);
+//                finish();
 
             }
         };
