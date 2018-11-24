@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 
+
 public class LaughScreen extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.hci.laughtr.MESSAGE";
     private CountDownTimer laughtTimer;

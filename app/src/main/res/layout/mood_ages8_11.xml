@@ -7,6 +7,7 @@
     android:layout_height="match_parent">
 
     <pl.droidsonroids.gif.GifImageView
+        android:id="@+id/gifImageView3"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:adjustViewBounds="false"
@@ -15,22 +16,25 @@
         android:src="@drawable/snow"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/feelText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
         android:shadowColor="#000000"
         android:shadowDx="2.0"
         android:shadowDy="2.0"
         android:shadowRadius="2.0"
-        android:text="How Do You Feel?"
+        android:text="How are you feeling?"
         android:textAllCaps="false"
-        android:textColor="@android:color/holo_red_dark"
-        android:textSize="36sp"
+        android:textColor="@android:color/background_light"
+        android:textSize="72sp"
         android:typeface="normal"
         app:fontFamily="@font/ubuntu"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -40,95 +44,119 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.1" />
 
+    <ImageView
+        android:id="@+id/imageView6"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="300dp"
+        android:alpha="0.8"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/gifImageView3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView3"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/topseparator" />
+
     <ImageButton
         android:id="@+id/happyFace"
         style="@android:style/Widget.Holo.ImageButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="false"
+        android:background="@null"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:background="@null"
-        app:layout_constraintTop_toBottomOf="@+id/feelText"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.102"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.15"
-        app:layout_constraintVertical_bias="0.2"
-        app:srcCompat="@drawable/happyface" />
+        app:layout_constraintTop_toBottomOf="@+id/feelText"
+        app:layout_constraintVertical_bias="0.356"
+        app:srcCompat="@drawable/happyface2" />
 
     <ImageButton
         android:id="@+id/plainFace"
         style="@android:style/Widget.Holo.ImageButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="false"
+        android:background="@null"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:background="@null"
-        app:layout_constraintTop_toBottomOf="@+id/feelText"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
 
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintVertical_bias="0.2"
-        app:srcCompat="@drawable/plainface" />
+        app:layout_constraintTop_toBottomOf="@+id/feelText"
+        app:layout_constraintVertical_bias="0.356"
+        app:srcCompat="@drawable/plainface2" />
 
     <ImageButton
         android:id="@+id/sadFace"
         style="@android:style/Widget.Holo.ImageButton"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:adjustViewBounds="false"
+        android:background="@null"
         android:cropToPadding="false"
         android:scaleType="centerCrop"
-        android:background="@null"
-        app:layout_constraintTop_toBottomOf="@+id/feelText"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.903"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintHorizontal_bias="0.85"
-        app:layout_constraintVertical_bias="0.2"
-        app:srcCompat="@drawable/sadface" />
+        app:layout_constraintTop_toBottomOf="@+id/feelText"
+        app:layout_constraintVertical_bias="0.356"
+        app:srcCompat="@drawable/sadface2" />
 
     <ImageButton
         android:id="@+id/angryFace"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginStart="84dp"
+        android:layout_marginLeft="84dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
         android:background="@null"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/sleepyFace"
-        app:layout_constraintHorizontal_bias="0.699"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/happyFace"
-        app:layout_constraintVertical_bias="0.497"
-        app:srcCompat="@drawable/angryface" />
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/angryface2" />
 
     <ImageButton
         android:id="@+id/sleepyFace"
-        android:layout_width="80dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
         android:layout_marginBottom="8dp"
         android:background="@null"
+        android:scaleType="fitXY"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.905"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sadFace"
-        app:layout_constraintVertical_bias="0.497"
-        app:srcCompat="@drawable/sleepyface" />
+        app:layout_constraintVertical_bias="0.043"
+        app:srcCompat="@drawable/sleepyface2" />
 
+
+    <ImageView
+        android:id="@+id/imageView7"
+        android:layout_width="400dp"
+        android:layout_height="60dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
+        android:alpha="0.8"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifImageView3"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/bottomseparator" />
 
 </android.support.constraint.ConstraintLayout>

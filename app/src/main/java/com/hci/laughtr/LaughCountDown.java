@@ -4,17 +4,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
 import android.widget.TextView;
+
+import pl.droidsonroids.gif.GifImageView;
 
 public class LaughCountDown extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.hci.laughtr.MESSAGE";
     private TextView countdownText;
     private CountDownTimer countDownTimer;
+    private GifImageView loadinggif;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.count_down);
         countdownText = findViewById(R.id.countdown);
+        loadinggif = findViewById(R.id.gifImageView2);
     }
 
     protected void onStart(){
@@ -41,10 +46,12 @@ public class LaughCountDown extends AppCompatActivity {
 
     public void startCountDown(Intent intent){
         final Intent myIntent = intent;
+        loadinggif.setVisibility(View.VISIBLE);
         countDownTimer = new CountDownTimer(4 * 1020, 1000) {
             int count=3;
             public void onTick(long millisUntilFinished) {
                 if (count ==0){
+                    loadinggif.setVisibility(View.INVISIBLE);
                     countdownText.setText("Laugh");
                 }else countdownText.setText(count+"");
                 count-=1;
