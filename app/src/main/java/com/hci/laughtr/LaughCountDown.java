@@ -7,7 +7,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.TextView;
 
 public class LaughCountDown extends AppCompatActivity {
-
+    public static final String EXTRA_MESSAGE = "com.hci.laughtr.MESSAGE";
     private TextView countdownText;
     private CountDownTimer countDownTimer;
     @Override
@@ -20,7 +20,12 @@ public class LaughCountDown extends AppCompatActivity {
     protected void onStart(){
         super.onStart();
         countdownText.setText("Ready");
+
+        Intent intent = getIntent();
+        String message = intent.getStringExtra(EXTRA_MESSAGE);
         final Intent myIntent = new Intent(this, LaughScreen.class);
+        myIntent.putExtra(EXTRA_MESSAGE, message);
+
         countDownTimer = new CountDownTimer(1 * 1000, 1000) {
             public void onTick(long millisUntilFinished) { }
             public void onFinish() {startCountDown(myIntent);}
@@ -44,7 +49,7 @@ public class LaughCountDown extends AppCompatActivity {
                 }else countdownText.setText(count+"");
                 count-=1;
             }
-            public void onFinish() { startActivityForResult(myIntent, 0);}
+            public void onFinish() { startActivityForResult(myIntent, 0);finish();}
         };
 
         countDownTimer.start();

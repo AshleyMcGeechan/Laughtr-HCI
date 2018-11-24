@@ -15,17 +15,17 @@
         android:shadowDx="2.0"
         android:shadowDy="2.0"
         android:shadowRadius="2.0"
-        android:text="How Do you Feel?"
+        android:text="How Do You Feel?"
         android:textAllCaps="false"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="36sp"
         android:typeface="normal"
         app:fontFamily="@font/ubuntu"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintVertical_bias="0.1" />
 
     <ImageButton
