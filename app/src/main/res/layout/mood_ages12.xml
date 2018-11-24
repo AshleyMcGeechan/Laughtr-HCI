@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:layout_editor_absoluteY="81dp">
 
 
     <ScrollView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="380dp"
+        android:layout_height="540dp"
+        android:layout_marginStart="4dp"
+
+        android:layout_marginLeft="4dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="4dp"
+        android:layout_marginRight="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
             android:id="@+id/scroller"
@@ -27,7 +33,15 @@
                 android:id="@+id/q1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
                 android:text="In general, how would you say your health is?"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 app:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -38,6 +52,8 @@
                 android:id="@+id/radioGroup"
                 android:layout_width="wrap_content"
                 android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -52,40 +68,60 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Very Bad"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q1-2"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Bad"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q1-3"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Fine"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q1-4"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Good"
-                    android:textSize="10sp" />
-
-                <RadioButton
-                    android:id="@+id/q1-5"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="Very Good"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -93,7 +129,16 @@
                 android:id="@+id/q2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How difficult do you find it to do activites because of your health problems?"
+                android:layout_gravity="center"
+                android:layout_marginTop="12dp"
+                android:gravity="center"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
+                android:text="Do you struggle with any of these activites because of your health problems?"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 app:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -104,6 +149,8 @@
                 android:id="@+id/radioGroup2"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -118,40 +165,60 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="I struggle with everyday tasks"
-                    android:textSize="10sp" />
-
-                <RadioButton
-                    android:id="@+id/q2-2"
-                    android:layout_width="100dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="I struggle to walk distances or climb stairs"
-                    android:textSize="10sp" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="12sp"
+                    android:text="Everyday tasks" />
 
                 <RadioButton
                     android:id="@+id/q2-3"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="I struggle with things that take some energy"
-                    android:textSize="10sp" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="12sp"
+                    android:text="Things that take some energy like climbing stairs" />
 
                 <RadioButton
                     android:id="@+id/q2-4"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="I struggle with things that take a lot of energy"
-                    android:textSize="10sp" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="12sp"
+                    android:text="Things that take a lot of energy like sports" />
 
                 <RadioButton
                     android:id="@+id/q2-5"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="Not at all"
-                    android:textSize="10sp" />
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="12sp"
+                    android:text="Not at all" />
 
             </RadioGroup>
 
@@ -159,7 +226,16 @@
                 android:id="@+id/q3"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
                 android:text="Has it been difficult to spend time on schoolwork or activites with friends because of problems with your mood or physical health?"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 app:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -170,6 +246,8 @@
                 android:id="@+id/radioGroup3"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -184,24 +262,45 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Yes"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q3-2"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Unsure"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q3-3"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="No"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -209,7 +308,16 @@
                 android:id="@+id/q4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="How much pain or discomfort have you had?"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
+                android:text="How much pain or discomfort have you had recently?"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 app:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -220,6 +328,8 @@
                 android:id="@+id/radioGroup4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -235,32 +345,60 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="A lot"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q4-2"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Some"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q4-3"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="A little"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q4-4"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="None"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -268,7 +406,16 @@
                 android:id="@+id/q5"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
                 android:text="How much of the time do you feel sad or unhappy?"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 app:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -279,6 +426,8 @@
                 android:id="@+id/radioGroup5"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -294,8 +443,15 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Always"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q5-2"
@@ -303,15 +459,27 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="More often than not"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q5-3"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Sometimes"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/q5-4"
@@ -319,7 +487,12 @@
                     android:layout_height="match_parent"
                     android:layout_weight="1"
                     android:text="Never"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -327,7 +500,16 @@
                 android:id="@+id/q6"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
                 android:text="How much of the time do you feel afraid or worried?"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 app:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -338,6 +520,8 @@
                 android:id="@+id/radioGroup6"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -353,32 +537,60 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Always"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q6-2"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="More often than not"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q6-3"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Sometimes"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/q6-4"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Never"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
             </RadioGroup>
 
@@ -386,7 +598,16 @@
                 android:id="@+id/q7"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:shadowColor="#000000"
+                android:shadowDx="2.0"
+                android:shadowDy="2.0"
+                android:shadowRadius="2.0"
                 android:text="How much of the time do you feel happy or cheerful?"
+                android:textColor="@android:color/background_light"
+                android:textSize="18sp"
                 app:fontFamily="@font/ubuntu"
                 app:layout_constraintBottom_toTopOf="@+id/radioGroup"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -397,6 +618,8 @@
                 android:id="@+id/radioGroup7"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -412,34 +635,73 @@
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Always"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q7-2"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="More often than not"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
                 <RadioButton
                     android:id="@+id/q7-3"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Sometimes"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="12sp" />
 
                 <RadioButton
                     android:id="@+id/q7-4"
                     android:layout_width="100dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
                     android:text="Never"
-                    android:textSize="10sp" />
+                    android:textColor="@android:color/background_light"
+                    android:shadowColor="#000000"
+                    android:shadowDx="2.0"
+                    android:shadowDy="2.0"
+                    android:shadowRadius="2.0"
+                    android:textSize="14sp" />
 
             </RadioGroup>
+
+            <ImageButton
+                android:id="@+id/continue_button"
+                style="@android:style/Widget.Holo.ImageButton"
+                android:layout_width="380dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:adjustViewBounds="false"
+                android:background="@drawable/continue_button"
+                android:cropToPadding="false"
+                android:scaleType="centerCrop" />
 
         </LinearLayout>
     </ScrollView>
