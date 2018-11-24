@@ -1,8 +1,10 @@
 package com.hci.laughtr;
 
+import android.content.Context;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.webkit.WebView;
 import android.widget.ImageButton;
 import android.content.Intent;
 
@@ -37,8 +39,6 @@ public class StartScreen extends AppCompatActivity {
                 startActivityForResult(myIntent, 0);
             }
         });
-
     }
-
 
 }

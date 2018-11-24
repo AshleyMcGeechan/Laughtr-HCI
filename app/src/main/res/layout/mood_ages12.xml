@@ -5,9 +5,20 @@
     android:id="@+id/linearLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/background"
     tools:layout_editor_absoluteY="81dp">
 
+    <pl.droidsonroids.gif.GifImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="false"
+        android:cropToPadding="false"
+        android:scaleType="centerCrop"
+        android:src="@drawable/snow"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
 
     <ScrollView
         android:layout_width="380dp"
@@ -28,6 +39,13 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView6"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/topseparator" />
 
             <TextView
                 android:id="@+id/q1"
@@ -124,6 +142,15 @@
                     android:textSize="14sp" />
 
             </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageView8"
+                android:layout_width="350dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:srcCompat="@drawable/separator3" />
 
             <TextView
                 android:id="@+id/q2"
@@ -222,6 +249,15 @@
 
             </RadioGroup>
 
+            <ImageView
+                android:id="@+id/imageView9"
+                android:layout_width="350dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:srcCompat="@drawable/separator3" />
+
             <TextView
                 android:id="@+id/q3"
                 android:layout_width="wrap_content"
@@ -303,6 +339,15 @@
                     android:textSize="14sp" />
 
             </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="350dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:srcCompat="@drawable/separator3" />
 
             <TextView
                 android:id="@+id/q4"
@@ -402,6 +447,15 @@
 
             </RadioGroup>
 
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="350dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:srcCompat="@drawable/separator3" />
+
             <TextView
                 android:id="@+id/q5"
                 android:layout_width="wrap_content"
@@ -495,6 +549,15 @@
                     android:textSize="14sp" />
 
             </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="350dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:srcCompat="@drawable/separator3" />
 
             <TextView
                 android:id="@+id/q6"
@@ -594,6 +657,15 @@
 
             </RadioGroup>
 
+            <ImageView
+                android:id="@+id/imageView13"
+                android:layout_width="350dp"
+                android:layout_height="15dp"
+                android:scaleType="fitCenter"
+                android:layout_gravity="center"
+                android:gravity="center"
+                app:srcCompat="@drawable/separator3" />
+
             <TextView
                 android:id="@+id/q7"
                 android:layout_width="wrap_content"
@@ -691,6 +763,13 @@
                     android:textSize="14sp" />
 
             </RadioGroup>
+
+            <ImageView
+                android:id="@+id/imageView7"
+                android:layout_width="400dp"
+                android:layout_height="60dp"
+                android:scaleType="fitStart"
+                app:srcCompat="@drawable/bottomseparator" />
 
             <ImageButton
                 android:id="@+id/continue_button"
