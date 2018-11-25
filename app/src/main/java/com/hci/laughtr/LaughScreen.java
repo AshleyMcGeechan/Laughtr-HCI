@@ -26,7 +26,7 @@ public class LaughScreen extends AppCompatActivity {
 
         if (message ==0)maybeIntent = new Intent(this, ToddlerMood.class);
         else if (message ==1) maybeIntent = new Intent(this, KidsMood2.class);
-        else if (message ==2)maybeIntent = new Intent(this, TeensMood.class);
+        else if (message ==2)maybeIntent = new Intent(this, TeensMood2.class);
         else maybeIntent = new Intent(this, StartScreen.class);
 
 
@@ -35,7 +35,7 @@ public class LaughScreen extends AppCompatActivity {
         myIntent = maybeIntent;
         myIntent.putExtra(EXTRA_MESSAGE, "End");
 
-        laughtTimer = new CountDownTimer(6 * 1000 , 1000) {
+        laughtTimer = new CountDownTimer(5 * 1000 , 1000) {
             public void onTick(long millisUntilFinished) { }
             public void onFinish() {
                 startActivity(myIntent);

@@ -6,7 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageButton;
 
-public class TeensMood extends AppCompatActivity {
+public class TeensMood2 extends AppCompatActivity {
     public static final String EXTRA_MESSAGE = "com.hci.laughtr.MESSAGE";
 
     @Override
@@ -21,7 +21,9 @@ public class TeensMood extends AppCompatActivity {
         super.onStart();
         final ImageButton continue_button = findViewById(R.id.continue_button);
         final Intent myIntent = new Intent(this, LaughCountDown.class);
-
+        continue_button.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) { nextActivity(); }
+        });
 
         Intent intent = getIntent();
         String message = intent.getStringExtra(EXTRA_MESSAGE);
@@ -30,12 +32,12 @@ public class TeensMood extends AppCompatActivity {
         });
 
 
+
     }
 
     public void nextActivity(){
-
-        Intent myIntent =new Intent(this, LaughCountDown.class);
-        myIntent.putExtra(EXTRA_MESSAGE, "2");
+        Intent myIntent ;
+        myIntent =new Intent(this, AnalysisScreen.class);
         startActivity(myIntent);
     }
 }

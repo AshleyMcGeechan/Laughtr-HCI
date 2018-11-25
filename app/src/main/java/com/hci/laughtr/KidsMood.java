@@ -34,24 +34,6 @@ public class KidsMood extends AppCompatActivity {
 
         feelText = findViewById(R.id.feelText);
 
-        Intent intent = getIntent();
-        String message = intent.getStringExtra(EXTRA_MESSAGE);
-
-        if (message !=null && message.equals("End")) {
-            end=true;
-            feelText.setText("How About Now?");
-        }
-
-
-//        final Intent myIntent =new Intent(this, LaughCountDown.class);
-//        myIntent.putExtra(EXTRA_MESSAGE, "1");
-//        if(end){
-//            myIntent.setClass(this,AnalysisScreen.class);
-//        }else{
-//            myIntent.putExtra(EXTRA_MESSAGE, "1");
-//        }
-
-
         plainbtn.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {nextActivity();}
         });
@@ -75,14 +57,8 @@ public class KidsMood extends AppCompatActivity {
 
 
     public void nextActivity(){
-        Intent myIntent ;
-        if(end){
-            myIntent =new Intent(this, AnalysisScreen.class);
-
-        }else{
-            myIntent =new Intent(this, LaughCountDown.class);
-            myIntent.putExtra(EXTRA_MESSAGE, "1");
-        }
+        Intent myIntent = new Intent(this, LaughCountDown.class);
+        myIntent.putExtra(EXTRA_MESSAGE, "1");
         startActivity(myIntent);
     }
 }
