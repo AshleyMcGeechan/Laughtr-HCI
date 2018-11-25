@@ -24,13 +24,10 @@ public class LaughScreen extends AppCompatActivity {
         Intent intent = getIntent();
         int message = Integer.parseInt(intent.getStringExtra(EXTRA_MESSAGE));
 
-        if (message ==0)maybeIntent = new Intent(this, ToddlerMood.class);
+        if (message ==0)maybeIntent = new Intent(this, ToddlerMood2.class);
         else if (message ==1) maybeIntent = new Intent(this, KidsMood2.class);
         else if (message ==2)maybeIntent = new Intent(this, TeensMood2.class);
         else maybeIntent = new Intent(this, StartScreen.class);
-
-
-
 
         myIntent = maybeIntent;
         myIntent.putExtra(EXTRA_MESSAGE, "End");

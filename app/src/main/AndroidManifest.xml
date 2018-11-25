@@ -78,6 +78,13 @@
                 android:value=".StartScreen" />
         </activity>
 
+        <activity android:name=".ToddlerMood2"
+            android:parentActivityName=".StartScreen">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".StartScreen" />
+        </activity>
+
     </application>
 
 </manifest>
