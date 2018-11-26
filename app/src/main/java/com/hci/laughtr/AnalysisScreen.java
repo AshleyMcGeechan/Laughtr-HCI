@@ -2,8 +2,8 @@ package com.hci.laughtr;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
-import android.support.v4.app.TaskStackBuilder;
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.app.TaskStackBuilder;
 
 public class AnalysisScreen extends AppCompatActivity {
     @Override
