@@ -2,6 +2,7 @@ package com.hci.laughtr;
 
 import android.content.Context;
 import android.content.Intent;
+import android.media.audiofx.Visualizer;
 import android.os.Bundle;
 import android.os.Environment;
 import android.support.constraint.ConstraintLayout;
@@ -15,6 +16,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.LinearLayout;
 import static android.Manifest.permission.READ_EXTERNAL_STORAGE;
+import ak.sh.ay.musicwave.MusicWave;
 
 import java.io.IOException;
 
@@ -25,6 +27,8 @@ public class AnalysisScreen extends AppCompatActivity {
     private MediaPlayer   mPlayer = null;
     private static final String LOG_TAG = "StartScreen";
     public static final int RequestPermissionCode = 1;
+    private Visualizer mVisualizer;
+    private MusicWave musicWave;
 
     class PlayButton extends AppCompatButton {
         boolean mStartPlaying = true;
@@ -57,7 +61,9 @@ public class AnalysisScreen extends AppCompatActivity {
     }
 
     private void startPlaying() {
+        musicWave = (MusicWave) findViewById(R.id.musicWave);
         mPlayer = new MediaPlayer();
+        prepareVisualizer();
         try {
             mPlayer.setDataSource(mFileName);
             mPlayer.prepare();
@@ -67,9 +73,27 @@ public class AnalysisScreen extends AppCompatActivity {
         }
     }
 
+    private void prepareVisualizer() {
+        mVisualizer = new Visualizer(mPlayer.getAudioSessionId());
+        mVisualizer.setCaptureSize(Visualizer.getCaptureSizeRange()[1]);
+        mVisualizer.setDataCaptureListener(
+                new Visualizer.OnDataCaptureListener() {
+                    public void onWaveFormDataCapture(Visualizer visualizer,
+                                                      byte[] bytes, int samplingRate) {
+                        musicWave.updateVisualizer(bytes);
+                    }
+
+                    public void onFftDataCapture(Visualizer visualizer,
+                                                 byte[] bytes, int samplingRate) {
+                    }
+                }, Visualizer.getMaxCaptureRate() / 2, true, false);
+        mVisualizer.setEnabled(true);
+    }
+
     private void stopPlaying() {
         mPlayer.release();
         mPlayer = null;
+        mVisualizer.setEnabled(false);
     }
 
     @Override
@@ -97,6 +121,7 @@ public class AnalysisScreen extends AppCompatActivity {
         TaskStackBuilder builder = TaskStackBuilder.create(this);
         builder.addNextIntentWithParentStack(myIntent);
         builder.startActivities();
+        mVisualizer.release();
     }
 
 }

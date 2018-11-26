@@ -80,6 +80,17 @@
         app:layout_constraintTop_toTopOf="parent">
 
 
+
+
     </LinearLayout>
+
+    <ak.sh.ay.musicwave.MusicWave
+        android:id="@+id/musicWave"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:colorGradient="true"
+        app:endColor="@color/colorPrimary"
+        app:startColor="@color/colorAccent"
+        app:waveThickness="1" />
 
 </android.support.constraint.ConstraintLayout>
