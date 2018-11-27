@@ -34,26 +34,11 @@
         app:srcCompat="@drawable/blackground" />
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="360dp"
-        android:layout_height="180dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginTop="92dp"
-        android:contentDescription="laugh0"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/childlaughing1" />
-
-    <ImageView
         android:id="@+id/imageView3"
         android:layout_width="360dp"
         android:layout_height="180dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -63,8 +48,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.517"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.497"
         app:srcCompat="@drawable/spectrogram" />
 
     <LinearLayout
@@ -87,10 +70,15 @@
     <ak.sh.ay.musicwave.MusicWave
         android:id="@+id/musicWave"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="178dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:layout_marginBottom="228dp"
         app:colorGradient="true"
         app:endColor="@color/colorPrimary"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:startColor="@color/colorAccent"
-        app:waveThickness="1" />
+        app:waveThickness="10" />
 
 </android.support.constraint.ConstraintLayout>
